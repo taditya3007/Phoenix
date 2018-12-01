@@ -2387,3 +2387,14 @@ ul.links li a:hover {
 }
 
 /*-- //responsive media queries --*/
+
+
+/* custom css */
+.cmn_display_cls{
+    display:none;
+}
+a:focus{
+    outline:none;
+    border:none;
+}
+/* custom css */
