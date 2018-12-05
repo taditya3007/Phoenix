@@ -39,6 +39,11 @@
 	<!--CONTACT CSS-->
 		<link href="css/contact.css" rel='stylesheet' type='text/css' />
 	<!--CONTACT CSS-->
+
+	<!--CHECKOUT CSS-->
+		<link rel="stylesheet" type="text/css" href="css/checkout.css">
+		<link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
+	<!--CHECKOUT CSS-->
 </head>
 <body>
 
@@ -56,7 +61,7 @@
 				</div>
 				<div class="col-md-6 logo-w3layouts text-center">
 					<h1 class="logo-w3layouts">
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="/" onclick="navigation('homepage', true);return false;">
 							Goggles </a>
 					</h1>
 				</div>
@@ -69,14 +74,10 @@
 							</a>
 						</li>
 						<li class="galssescart galssescart2 cart cart box_1">
-							<form action="#" method="post" class="last">
-								<input type="hidden" name="cmd" value="_cart">
-								<input type="hidden" name="display" value="1">
-								<button class="top_googles_cart" type="submit" name="submit" value="">
-									My Cart
-									<i class="fas fa-cart-arrow-down"></i>
-								</button>
-							</form>
+							<a class="top_googles_cart" href="/#checkout" onclick="navigation('checkout', true);return false;">
+								My Cart
+								<i class="fas fa-cart-arrow-down"></i>
+							</a>
 						</li>
 					</ul>
 					<!---->
@@ -163,18 +164,19 @@
 
 
 		<!-- CMN banner-->
-		<div class="banner_inner cmn_display_cls about_display contact_display shop_display">
+		<div class="banner_inner cmn_display_cls about_display contact_display shop_display checkout_display">
 			<div class="services-breadcrumb">
 				<div class="inner_breadcrumb">
 
 					<ul class="short">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="/" onclick="navigation('homepage', true);return false;">Home</a>
 							<i>|</i>
 						</li>
 						<li class="about_display cmn_display_cls">About Us</li>
 						<li class="contact_display cmn_display_cls">Contact Us</li>
 						<li class="shop_display cmn_display_cls">Shop</li>
+						<li class="checkout_display cmn_display_cls">Checkout </li>
 					</ul>
 				</div>
 			</div>
@@ -203,7 +205,7 @@
 								<h3>Men’s eyewear
 									<span>Cool summer sale 50% off</span>
 								</h3>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</div>
 						</div>
 						<div class="carousel-item item2">
@@ -211,7 +213,7 @@
 								<h3>Women’s eyewear
 									<span>Want to Look Your Best?</span>
 								</h3>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 
 							</div>
 						</div>
@@ -220,7 +222,7 @@
 								<h3>Men’s eyewear
 									<span>Cool summer sale 50% off</span>
 								</h3>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 
 							</div>
 						</div>
@@ -229,7 +231,7 @@
 								<h3>Women’s eyewear
 									<span>Want to Look Your Best?</span>
 								</h3>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</div>
 						</div>
 					</div>
@@ -259,7 +261,7 @@
 									<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
 									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 									<p>
-										<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+										<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 									</p>
 								</div>
 								<!-- /.col-lg-4 -->
@@ -271,7 +273,7 @@
 									<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
 									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 									<p>
-										<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+										<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 									</p>
 								</div>
 								<!-- /.col-lg-4 -->
@@ -283,7 +285,7 @@
 									<h4 class="sub-tittle-w3layouts my-lg-4 my-3">UV Protection</h4>
 									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 									<p>
-										<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+										<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 									</p>
 								</div>
 								<!-- /.col-lg-4 -->
@@ -400,7 +402,7 @@
 										dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
 										book.
 									</p>
-									<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+									<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 								</div>
 							</div>
 						</div>
@@ -414,7 +416,7 @@
 									<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
 									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 									<p>
-										<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+										<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 									</p>
 								</div>
 								<!-- /.col-lg-4 -->
@@ -425,7 +427,7 @@
 									<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
 									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 									<p>
-										<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+										<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 									</p>
 								</div>
 								<!-- /.col-lg-4 -->
@@ -436,7 +438,7 @@
 									<h4 class="sub-tittle-w3layouts my-lg-4 my-3">UV Protection</h4>
 									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 									<p>
-										<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+										<a href="/#shop" onclick="navigation('shop', true);return false;" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 									</p>
 								</div>
 								<!-- /.col-lg-4 -->
@@ -566,18 +568,10 @@
 									</div>
 									<div class="occasion-cart">
 											<div class="googles single-item singlepage">
-													<form action="#" method="post">
-														<input type="hidden" name="cmd" value="_cart">
-														<input type="hidden" name="add" value="1">
-														<input type="hidden" name="googles_item" value="Farenheit">
-														<input type="hidden" name="amount" value="575.00">
-														<button type="submit" class="googles-cart pgoogles-cart">
-															Add to Cart
-														</button>
-
-													</form>
-
-												</div>
+												<button type="submit" class="googles-cart pgoogles-cart">
+													Add to Cart
+												</button>
+											</div>
 									</div>
 									<ul class="footer-social text-left mt-lg-4 mt-3">
 											<li>Share On : </li>
@@ -693,6 +687,143 @@
 		</section>
             <!--Shoppage body-->
         </div>
+
+		<div class="checkout_wrapper checkout_display cmn_display_cls">
+			<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+				<div class="container">
+					<div class="inner-sec-shop px-lg-4 px-3">
+						<h3 class="tittle-w3layouts my-lg-4 mt-3">Checkout </h3>
+						<div class="checkout-right">
+							<h4>Your shopping cart contains:
+								<span>3 Products</span>
+							</h4>
+							<table class="timetable_sub">
+								<thead>
+								<tr>
+									<th>SL No.</th>
+									<th>Product</th>
+									<th>Quantity</th>
+									<th>Product Name</th>
+
+									<th>Price</th>
+									<th>Remove</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr class="rem1">
+									<td class="invert">1</td>
+									<td class="invert-image">
+										<a href="/#shop" onclick="navigation('shop', true);return false;">
+											<img src="images/s1.jpg" alt=" " class="img-responsive">
+										</a>
+									</td>
+									<td class="invert">
+										<div class="quantity">
+											<div class="quantity-select">
+												<div class="entry value-minus">&nbsp;</div>
+												<div class="entry value">
+													<span>1</span>
+												</div>
+												<div class="entry value-plus active">&nbsp;</div>
+											</div>
+										</div>
+									</td>
+									<td class="invert">Irayz Butterfly </td>
+
+									<td class="invert">$281.00</td>
+									<td class="invert">
+										<div class="rem">
+											<div class="close1"> </div>
+										</div>
+
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="checkout-left row">
+							<div class="col-md-4 checkout-left-basket">
+								<h4>Continue to basket</h4>
+								<ul>
+									<li>Product1
+										<i>-</i>
+										<span>$281.00 </span>
+									</li>
+									<li>Product2
+										<i>-</i>
+										<span>$325.00 </span>
+									</li>
+									<li>Product3
+										<i>-</i>
+										<span>$325.00 </span>
+									</li>
+									<li>Total Service Charges
+										<i>-</i>
+										<span>$55.00</span>
+									</li>
+									<li>Total
+										<i>-</i>
+										<span>$986.00</span>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-8 address_form">
+								<h4>Add a new Details</h4>
+								<form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
+									<section class="creditly-wrapper wrapper">
+										<div class="information-wrapper">
+											<div class="first-row form-group">
+												<div class="controls">
+													<label class="control-label">Full name: </label>
+													<input class="billing-address-name form-control" type="text" name="name" placeholder="Full name">
+												</div>
+												<div class="card_number_grids">
+													<div class="card_number_grid_left">
+														<div class="controls">
+															<label class="control-label">Mobile number:</label>
+															<input class="form-control" type="text" placeholder="Mobile number">
+														</div>
+													</div>
+													<div class="card_number_grid_right">
+														<div class="controls">
+															<label class="control-label">Landmark: </label>
+															<input class="form-control" type="text" placeholder="Landmark">
+														</div>
+													</div>
+													<div class="clear"> </div>
+												</div>
+												<div class="controls">
+													<label class="control-label">Town/City: </label>
+													<input class="form-control" type="text" placeholder="Town/City">
+												</div>
+												<div class="controls">
+													<label class="control-label">Address type: </label>
+													<select class="form-control option-w3ls">
+														<option>Office</option>
+														<option>Home</option>
+														<option>Commercial</option>
+
+													</select>
+												</div>
+											</div>
+											<button class="submit check_out">Delivery to this Address</button>
+										</div>
+									</section>
+								</form>
+								<div class="checkout-right-basket">
+									<a href="payment.html">Make a Payment </a>
+								</div>
+							</div>
+
+							<div class="clearfix"> </div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+		</div>
 	</div>
 
 
@@ -764,19 +895,19 @@
 					</div>
 					<ul class="links">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="/" onclick="navigation('homepage', true);return false;">Home</a>
 						</li>
 						<li>
-							<a href="about.html">About</a>
+							<a href="/#about" onclick="navigation('about', true);return false;">About</a>
 						</li>
 						<li>
 							<a href="404.html">Error</a>
 						</li>
 						<li>
-							<a href="shop.html">Shop</a>
+							<a href="/#shop" onclick="navigation('shop', true);return false;">Shop</a>
 						</li>
 						<li>
-							<a href="contact.html">Contact Us</a>
+							<a href="/#contact" onclick="navigation('contact', true);return false;">Contact Us</a>
 						</li>
 					</ul>
 				</div>

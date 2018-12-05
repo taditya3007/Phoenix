@@ -50,17 +50,38 @@ function shop_ready(){
     });
 }
 
+function checkout_ready(){
+    $('.value-plus').on('click', function () {
+        var divUpd = $(this).parent().find('.value'),
+            newVal = parseInt(divUpd.text(), 10) + 1;
+        divUpd.text(newVal);
+    });
+
+    $('.value-minus').on('click', function () {
+        var divUpd = $(this).parent().find('.value'),
+            newVal = parseInt(divUpd.text(), 10) - 1;
+        if (newVal >= 1) divUpd.text(newVal);
+    });
+
+    $('.close1').on('click', function (c) {
+        $('.rem1').fadeOut('slow', function (c) {
+            $('.rem1').remove();
+        });
+    });
+}
+
 function display_content(){
     for(var i=0; i<$(dynamic_content_selector).length;i++){
         if(!$($(dynamic_content_selector)[i]).hasClass(page_name+'_display')){
             $($(dynamic_content_selector)[i]).fadeOut(150);
         }
     }
-    $('.'+page_name+'_display').fadeIn(700,'swing', function(){
-        if(typeof(window[page_name+'_ready']) === 'function'){
+    $('.'+page_name+'_display').fadeIn(300)
+    setTimeout(function(){
+        if(typeof(window[page_name+'_ready']) === 'function' ){
             window[page_name+'_ready']();
         }
-    });
+    },300);
 
 }
 

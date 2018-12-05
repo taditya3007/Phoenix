@@ -2397,4 +2397,20 @@ a:focus{
     outline:none;
     border:none;
 }
+
+.top_googles_cart{
+    text-align: center;
+    background: none;
+    letter-spacing: 2px;
+    color: #454546;
+    cursor: pointer;
+    border: 1px solid #dde2e6;
+    padding: 1em 1.5em;
+}
+.top_googles_cart:focus{
+    border: 1px solid #66afe9;
+}
+.top_googles_cart:hover{
+    color:#454546;
+}
 /* custom css */
