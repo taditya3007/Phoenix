@@ -1,4 +1,5 @@
 var page_name;
+var domain_name = 'Phoenix'
 var dynamic_content_selector = '.cmn_display_cls'
 
 function homepage_ready(){
@@ -71,6 +72,8 @@ function checkout_ready(){
 }
 
 function display_content(){
+    var new_title = domain_name + ' | ' + page_name;
+    $('title').html(new_title);
     for(var i=0; i<$(dynamic_content_selector).length;i++){
         if(!$($(dynamic_content_selector)[i]).hasClass(page_name+'_display')){
             $($(dynamic_content_selector)[i]).fadeOut(150);
