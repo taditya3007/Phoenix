@@ -2413,4 +2413,23 @@ a:focus{
 .top_googles_cart:hover{
     color:#454546;
 }
+
+/* swal popup css */
+.swal-button{
+    background-color: black;
+    border-radius:0;
+    opacity
+}
+.swal-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.swal-button:not([disabled]):hover{
+    background-color: rgba(0,0,0, 0.9);
+}
+.cart_count{
+    float:none !important;
+}
+/* swal popup css */
+
 /* custom css */

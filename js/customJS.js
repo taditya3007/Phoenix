@@ -1,6 +1,7 @@
 var page_name;
 var domain_name = 'Phoenix'
 var dynamic_content_selector = '.cmn_display_cls'
+var product_price = 500;
 
 function homepage_ready(){
     $('.owl-carousel').owlCarousel({
@@ -51,25 +52,48 @@ function shop_ready(){
     });
 }
 
+function modify_count_display(){
+    var cart_val = Number(window.sessionStorage.getItem('product_count')) || 0;
+    $('.cart_count').html(cart_val);
+    $('.cart_val').html(cart_val * product_price);
+}
+
 function checkout_ready(){
-    $('.value-plus').on('click', function () {
-        var divUpd = $(this).parent().find('.value'),
-            newVal = parseInt(divUpd.text(), 10) + 1;
-        divUpd.text(newVal);
-    });
-
-    $('.value-minus').on('click', function () {
-        var divUpd = $(this).parent().find('.value'),
-            newVal = parseInt(divUpd.text(), 10) - 1;
-        if (newVal >= 1) divUpd.text(newVal);
-    });
-
+    modify_count_display();
+    $('.close1').off('click');
     $('.close1').on('click', function (c) {
         $('.rem1').fadeOut('slow', function (c) {
             $('.rem1').remove();
         });
     });
 }
+
+
+function update_cart(added, notify){
+    var curr_count = Number(window.sessionStorage.getItem('product_count'));
+    if(curr_count === null){
+        var new_count = 1;
+    }
+    else{
+        if(!added){
+            var new_count = (curr_count === 0) ? curr_count : Number(curr_count) - 1;
+        }
+        else{
+            var new_count = Number(curr_count) + 1;
+        }
+    }
+    window.sessionStorage.setItem('product_count', new_count);
+    if(notify){
+        swal({
+          title: "Success!",
+          text: "Your item is added to the cart!",
+          icon: "success",
+          button: "OK",
+        });
+    }
+    modify_count_display();
+}
+
 
 function display_content(){
     var new_title = domain_name + ' | ' + page_name;

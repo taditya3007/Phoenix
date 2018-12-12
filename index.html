@@ -518,7 +518,7 @@
 								</div>
 								<div class="col-lg-8 single-right-left simpleCart_shelfItem">
 									<h3>Irayz Butterfly Sunglasses  (Black)</h3>
-									<p><span class="item_price">$650</span>
+									<p><span class="item_price">$500</span>
 										<del>$1,199</del>
 									</p>
 									<div class="rating1">
@@ -552,7 +552,7 @@
 									</div>
 									<div class="occasion-cart">
 											<div class="googles single-item singlepage">
-												<button type="submit" class="googles-cart pgoogles-cart">
+												<button onclick="update_cart(true, true);" class="googles-cart pgoogles-cart">
 													Add to Cart
 												</button>
 											</div>
@@ -679,7 +679,8 @@
 						<h3 class="tittle-w3layouts my-lg-4 mt-3">Checkout </h3>
 						<div class="checkout-right">
 							<h4>Your shopping cart contains:
-								<span>3 Products</span>
+								<span class="cart_count"></span>
+								Items
 							</h4>
 							<table class="timetable_sub">
 								<thead>
@@ -704,17 +705,17 @@
 									<td class="invert">
 										<div class="quantity">
 											<div class="quantity-select">
-												<div class="entry value-minus">&nbsp;</div>
+												<div onclick="update_cart(false);" class="entry value-minus">&nbsp;</div>
 												<div class="entry value">
-													<span>1</span>
+													<span class="cart_count">1</span>
 												</div>
-												<div class="entry value-plus active">&nbsp;</div>
+												<div onclick="update_cart(true);" class="entry value-plus active">&nbsp;</div>
 											</div>
 										</div>
 									</td>
 									<td class="invert">Irayz Butterfly </td>
 
-									<td class="invert">$281.00</td>
+									<td class="invert">$<span class="cart_val"></span></td>
 									<td class="invert">
 										<div class="rem">
 											<div class="close1"> </div>
@@ -730,16 +731,9 @@
 								<h4>Continue to basket</h4>
 								<ul>
 									<li>Product1
-										<i>-</i>
-										<span>$281.00 </span>
-									</li>
-									<li>Product2
-										<i>-</i>
-										<span>$325.00 </span>
-									</li>
-									<li>Product3
-										<i>-</i>
-										<span>$325.00 </span>
+										<i>x</i>
+										<span class="cart_count"></span>
+										<span class="cart_val"></span>
 									</li>
 									<li>Total Service Charges
 										<i>-</i>
@@ -923,6 +917,7 @@
     <!--jQuery-->
         <!--COMMON JS-->
             <script src="js/jquery-2.2.3.min.js"></script>
+			<script src="js/sweetalert.min.js"></script>
 
             <!--search jQuery-->
                 <script src="js/modernizr-2.6.2.min.js"></script>
